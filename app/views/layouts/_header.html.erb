@@ -1,8 +1,18 @@
-<nav class="container-fluid">
-  <div class="navbar-header">
-    <%= link_to 'Articles', '#' %>
+<nav class="navbar navbar-light bg-light justify-content-between mb-2">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <%= link_to 'Articles Tree', root_path, class: 'mx-2 navbar-brand' %>
+    </div>
+    <% if logged_in? %>
+      <nav class="navbar navbar-light bg-light justify-content-between">
+        <%= link_to current_user.name, user_path(current_user) %>
+        <%= link_to "log out", logout_path, class: 'mx-2', method: :delete %>
+      </nav>
+    <% else %>
+      <nav class="navbar navbar-light bg-light justify-content-between">
+        <%= link_to "Log in", login_path, class: 'mx-2' %> |
+        <%= link_to "Register", signup_path, class: 'mx-2' %>
+      </nav>
+    <% end %>
   </div>
-  <ul class="nav navbar-nav navbar-right">
-    <li><%= link_to 'Sign up', signup_path %></li>
-  </ul>
 </nav>
