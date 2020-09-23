@@ -2,7 +2,7 @@
 <p><%= @article.text %></p>
 <% if @article.image.attached? %>
   <div class="">
-    <%= image_tag @article.image %>
+    <%= image_tag @article.image.variant(resize_to_limit: [500, 500]) %>
   </div>
 <% end %>
 <%= link_to "Back to Articles List", articles_path %>
