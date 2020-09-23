@@ -1,3 +1,11 @@
 <div class="text-center home">
-  <h2>Welcome to the tree of Articles</h2>
+  <h1>Welcome to the tree of Articles</h1>
+  <ul>
+    <% @articles.each do |article| %>
+      <li>
+        <%= link_to article.title, article_path(article) %>
+      </li>
+    <% end %>
+  </ul>
+  <%= link_to 'Create a New Article', new_article_path %>
 </div>
