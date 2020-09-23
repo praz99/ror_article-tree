@@ -1,3 +1,6 @@
 <h1><%= @article.title %></h1>
 <p><%= @article.text %></p>
+<div class="">
+  <%= image_tag @article.image %>
+</div>
 <%= link_to "Back to Articles List", articles_path %>

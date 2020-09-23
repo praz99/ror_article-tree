@@ -12,6 +12,8 @@
 
       <% f.label :text %>
       <%= f.text_area :text, placeholder: 'Write your article here', size: '10x15', class: 'my-4 form-control' %>
+      <p>Attach a suitable image for your article.</p>
+      <%= f.file_field :image %>
 
       <%= f.submit 'Submit', class: 'mt-2 btn btn-primary' %>
     <% end %>
