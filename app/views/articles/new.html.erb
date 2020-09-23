@@ -7,12 +7,11 @@
           <li><%= error %></li>
         <% end %>
       </ul>
-      <% f.label :title %>
       <%= f.text_field :title, autofocus: true, placeholder: 'Give your article a nice title', class: 'mb-1 form-control' %>
 
-      <% f.label :text %>
       <%= f.text_area :text, placeholder: 'Write your article here', size: '10x15', class: 'my-4 form-control' %>
-      <p>Attach a suitable image for your article.</p>
+
+      <%= f.label :image, 'Add a suitable image for your article.' %>
       <%= f.file_field :image %>
 
       <%= f.submit 'Submit', class: 'mt-2 btn btn-primary' %>
