@@ -1,10 +1,23 @@
-<h1><%= @article.title %></h1>
-<p><%= @article.text %></p>
-<% if @article.image.attached? %>
-  <div class="">
-    <%= image_tag @article.image.variant(resize_to_limit: [500, 500]) %>
+<div class="contailer">
+  <div class="row">
+    <div class="col-sm-6 text-center offset-3">
+      <h1><%= @article.title %></h1>
+        <p><%= @article.text %></p>
+        <% if @article.image.attached? %>
+          <div class="">
+            <%= image_tag @article.image.variant(resize_to_limit: [500, 500]) %>
+          </div>
+        <% end %>
+        <p>Total <%= pluralize(@article.votes.count, 'vote') %></p>
+        <%= link_to 'Back to Articles List', articles_path %> |
+        <% vote = Vote.find_by(article: @article, user: current_user) %>
+        <% if vote %>
+          <%= link_to 'Vote down', article_vote_path(@article.id, id: vote.id), method: :delete %>
+        <% else %>
+          <%= link_to 'Vote up', article_votes_path(@article), method: :post %>
+        <% end %> |
+        <%= link_to 'Edit', edit_article_path(@article) %> |
+        <%= link_to 'Delete', article_path(@article), method: :delete, data: { confirm: 'Delete this Article? This cannot be undone!' } %>
+    </div>
   </div>
-<% end %>
-<%= link_to 'Back to Articles List', articles_path %> |
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Delete', article_path(@article), method: :delete, data: { confirm: 'Delete this Article? This cannot be undone!' } %>
+</div>
