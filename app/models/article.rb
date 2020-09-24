@@ -1,8 +1,11 @@
 class Article < ApplicationRecord
   belongs_to :author, class_name: 'User'
   validates :title, presence: true
+
   has_one_attached :image
   validate :accepted_image
+
+  has_many :votes, dependent: :destroy
 
   def accepted_image
     return unless image.attached?
