@@ -7,6 +7,9 @@ class Article < ApplicationRecord
 
   has_many :votes, dependent: :destroy
 
+  has_many :categorizes
+  has_many :categories, through: :categorizes
+
   def accepted_image
     return unless image.attached?
 
