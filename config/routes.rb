@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   resources :articles do
     resources :votes
   end
+  resources :categories, except: [:destroy]
 end
