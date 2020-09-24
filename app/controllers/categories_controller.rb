@@ -3,7 +3,7 @@ class CategoriesController < ApplicationController
   before_action :set_category, only: %I[show edit upddate destroy]
 
   def index
-    @categories = Categories.all.includes(:articles)
+    @categories = Category.all.includes(:articles)
   end
 
   def new

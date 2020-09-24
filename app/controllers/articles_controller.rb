@@ -11,6 +11,7 @@ class ArticlesController < ApplicationController
 
   def create
     @article = current_user.authored_articles.build(article_params)
+    @article.categorizes.build(category_id: params[:article][:category_ids])
     if @article.save
       flash[:success] = 'Article Created!'
       redirect_to @article
