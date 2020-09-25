@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 75%;
+}
+
+body {
+  margin-top: 60px;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a:hover, a:active, a:link, a:visited {
+  text-decoration: none;
+}
