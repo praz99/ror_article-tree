@@ -1,3 +1,5 @@
+<%= image_tag @featured_article.image.variant(resize_to_limit: [500,500]) %>
+
 <% @categories.each do |cat| %>
   <h3><%=link_to cat.name, category_path(cat) %></h3>
 <% end %>

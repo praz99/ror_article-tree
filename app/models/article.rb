@@ -10,6 +10,8 @@ class Article < ApplicationRecord
   has_many :categorizes
   has_many :categories, through: :categorizes, dependent: :destroy
 
+  scope :popular, -> { order('votes_count DESC NULLS LAST').first }
+
   def accepted_image
     return unless image.attached?
 

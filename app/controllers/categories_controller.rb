@@ -8,6 +8,7 @@ class CategoriesController < ApplicationController
 
   def home
     @categories = Category.ordered_priority.limit(4)
+    @featured_article = Article.popular
   end
 
   def new
