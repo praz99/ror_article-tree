@@ -13,13 +13,9 @@ class Article < ApplicationRecord
   def accepted_image
     return unless image.attached?
 
-    unless image.byte_size <= 2.megabyte
-      errors.add(:image, 'is too large (max 2MB)')
-    end
+    errors.add(:image, 'is too large (max 2MB)') unless image.byte_size <= 2.megabyte
 
     accepted_types = ['image/jpeg', 'image/jpg', 'image/png']
-    unless accepted_types.include?(image.content_type)
-      errors.add(:image, 'must be a JPEG/JPG or PNG')
-    end
+    errors.add(:image, 'must be a JPEG/JPG or PNG') unless accepted_types.include?(image.content_type)
   end
 end

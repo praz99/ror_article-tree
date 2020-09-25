@@ -2,10 +2,17 @@
   <div class="container-fluid">
     <div class="navbar-header">
       <%= link_to 'Articles Tree', root_path, class: 'mx-2 navbar-brand' %>
-      <%= link_to 'Create a New Article', new_article_path %> |
-      <%= link_to 'Create a New Category', new_category_path %> |
-      <%= link_to 'Explore all Categories', categories_path %>
+      <%= link_to 'Write an Article', new_article_path %> |
+      <%= link_to 'Categories', categories_path %>
     </div>
+    
+    <div>
+      <% categ = Category.ordered_priority.limit(4) %>
+      <% categ.each do |cat| %>
+        <%= link_to cat.name.capitalize, category_path(cat) %>
+      <% end %>
+    </div>
+    
     <nav class="navbar navbar-light bg-light justify-content-between">
       <% if logged_in? %>
         <%= link_to current_user.name, user_path(current_user) %>

@@ -3,7 +3,11 @@ class CategoriesController < ApplicationController
   before_action :set_category, only: %I[show edit upddate destroy]
 
   def index
-    @categories = Category.all.includes(:articles)
+    @categories = Category.ordered_priority
+  end
+
+  def home
+    @categories = Category.ordered_priority.limit(4)
   end
 
   def new
