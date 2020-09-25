@@ -25,6 +25,10 @@ class CategoriesController < ApplicationController
     end
   end
 
+  def show
+    @articles = @category.articles.order('created_at DESC')
+  end
+
   private
 
   def set_category

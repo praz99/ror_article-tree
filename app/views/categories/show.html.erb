@@ -1,0 +1,14 @@
+<% @articles.each do |art| %>
+  <div>
+    <%= art.title %>
+    <%= image_tag art.image.variant(resize_to_limit: [300, 300]) %>
+    <%= art.text %>
+    by <%= art.author.name %>
+    <% vote = Vote.find_by(article: art, user: current_user) %>
+      <% if vote %>
+        <%= link_to 'Vote down', article_vote_path(art.id, id: vote.id), method: :delete %>
+      <% else %>
+        <%= link_to 'Vote up', article_votes_path(art), method: :post %>
+      <% end %>
+  </div>
+<% end %>

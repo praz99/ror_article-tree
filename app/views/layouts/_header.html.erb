@@ -7,7 +7,8 @@
     </div>
     
     <div>
-      <% categ = Category.ordered_priority.limit(4) %>
+      <%= link_to 'Home', root_path %>
+      <% categ = Category.ordered_priority.limit(5) %>
       <% categ.each do |cat| %>
         <%= link_to cat.name.capitalize, category_path(cat) %>
       <% end %>
