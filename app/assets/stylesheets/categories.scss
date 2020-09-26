@@ -1,3 +1,32 @@
 // Place all the styles related to the categories controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+// home page layout
+.featured_article {
+  height: 55vh;
+  width: 100%;
+  background: $backgroundColor;    
+  background-size: 40%;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  color: white;
+
+  .info {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+
+    .feat-title a {
+      color: $footerLinksColor;
+      font-weight: 900;
+      font-size: 20px;
+    }
+
+    .feat-text {
+      font-size: 14px;
+      padding-top: 10px;
+    }
+  }
+}

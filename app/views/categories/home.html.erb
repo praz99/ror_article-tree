@@ -1,5 +1,19 @@
-<%= image_tag @featured_article.image.variant(resize_to_limit: [500,500]) %>
+<div class="featured_article" style="background-image: url(<%= (url_for(@featured_article.image))%>")>
+  <div class="info">
+    <div class="feat-title">
+      <%= link_to @featured_article.title, article_path(@featured_article) %>
+    </div>
+    <div class="feat-text">
+      <%= @featured_article.text.truncate(300) %>
+    </div>
+  </div>
+</div>
 
-<% @categories.each do |cat| %>
+<div class="categories">
+  
+</div>
+
+
+<!--<% @categories.each do |cat| %>
   <h3><%=link_to cat.name, category_path(cat) %></h3>
-<% end %>
+<% end %>-->
