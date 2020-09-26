@@ -1,11 +1,5 @@
-<div class="row">
-  <div class="col-md-4 offset-4">
     <%= form_with(model: @article, local: true) do |f| %>
-      <ul>
-        <% @article.errors.full_messages.each do |error| %>
-          <li><%= error %></li>
-        <% end %>
-      </ul>
+      <%= render 'shared/error_messages', error_resource: @article %>
       <%= f.text_field :title, autofocus: true, placeholder: 'Give your article a nice title', class: 'mb-1 form-control' %>
 
       <%= f.text_area :text, placeholder: 'Write your article here', size: '10x15', class: 'my-4 form-control' %>
@@ -23,5 +17,3 @@
       <%= f.submit 'Submit', class: 'mt-2 btn btn-primary' %>
       <%= link_to 'Cancel', :back, class: 'btn btn-primary' %>
     <% end %>
-  </div>
-</div>

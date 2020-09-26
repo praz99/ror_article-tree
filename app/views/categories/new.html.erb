@@ -2,11 +2,7 @@
   <div class="col-md-4 offset-4">
     <h2>Create new category for articles</h2>
       <%= form_with(model: @category, local: true) do |f| %>
-        <ul>
-          <% @category.errors.full_messages.each do |error| %>
-            <li><%= error %></li>
-          <% end %>
-        </ul>
+        <%= render 'shared/error_messages', error_resource: @category %>
         <%= f.text_field :name, autofocus: true, placeholder: 'name', class: 'my-2 form-control' %>
         <%= f.number_field :priority, placeholder: 'give it a priority number', class: 'my-2 form-control' %>
 
