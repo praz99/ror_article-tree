@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 // home page layout
+
 .featured_article {
   height: 55vh;
   width: 100%;
@@ -59,6 +60,73 @@
       position: absolute;
       bottom: 25px;
       left: 10px;
+    }
+  }
+}
+
+// show page layout
+
+.show-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  .show-article {
+    display: flex;
+    height: 41.8vh;
+    width: 100%;
+
+    .show-article-image {
+      height: 100%;
+      width: 50%;
+      background-position: top;
+      background-repeat: no-repeat;
+    }
+
+    .show-article-description {
+      width: 50%;
+      background-image: repeating-linear-gradient(-45deg, #fff 0 4px, #f3f3f3 4px 5px);
+      padding: 20px;
+      position: relative;
+
+      .show-category-name {
+        color: $categoryNameColor;
+        text-transform: capitalize;
+        font-size: 16px;
+        font-weight: 900;
+        margin-bottom: 7px;
+        border-bottom: 3px solid $categoryNameColor;
+      }
+
+      .show-article-title {
+        padding-top: 5px;
+        margin-bottom: 7px;
+      }
+
+      .show-article-title a {
+        color: #615856;
+        font-weight: 900;
+        text-transform: capitalize;
+      }
+
+      .show-article-text {
+        color: #615856;
+        font-size: 16px;
+      }
+
+      .article-vote {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        color: #615856;
+        font-size: 14px;
+
+        .show-article-vote a {
+          color: $footerLinksColor;
+        }
+      }
     }
   }
 }
