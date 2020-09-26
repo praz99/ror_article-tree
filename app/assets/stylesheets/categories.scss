@@ -30,3 +30,35 @@
     }
   }
 }
+
+.categories {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  .single-category {
+    height: 28.7vh;
+    background: $backgroundColor;
+    background-size: 100%;
+    background-position: top;
+    background-repeat: no-repeat;
+    position: relative;
+
+    .title-category a {
+      text-decoration: underline $footerLinksColor;
+    }
+
+    .title-category, .title-category a, .title-latest {
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      text-transform: capitalize;
+      padding: 10px 0 0 10px;
+    }
+
+    .title-latest {
+      position: absolute;
+      bottom: 25px;
+      left: 10px;
+    }
+  }
+}

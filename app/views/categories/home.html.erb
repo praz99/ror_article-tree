@@ -1,4 +1,4 @@
-<div class="featured_article" style="background-image: url(<%= (url_for(@featured_article.image))%>")>
+<div class="featured_article" style="background-image: url(<%= (url_for(@featured_article.image)) %>")>
   <div class="info">
     <div class="feat-title">
       <%= link_to @featured_article.title, article_path(@featured_article) %>
@@ -10,10 +10,10 @@
 </div>
 
 <div class="categories">
-  
+  <% @categories.each do |cat| %>
+    <div class="single-category" style="background-image: url(<%= (url_for(cat.articles.last.image)) %>)">
+      <div class="title-category"><%=link_to cat.name, category_path(cat) %></div>
+      <div class="title-latest"><%= cat.articles.last.title %></div>
+    </div>
+  <% end %>
 </div>
-
-
-<!--<% @categories.each do |cat| %>
-  <h3><%=link_to cat.name, category_path(cat) %></h3>
-<% end %>-->

@@ -13,6 +13,7 @@ body {
   font-size: 14px;
   font-size: 1.4rem;
   font-family: 'Roboto', sans-serif;
+  background: transparentize($backgroundColor, 0.3);
 }
 
 ul {
