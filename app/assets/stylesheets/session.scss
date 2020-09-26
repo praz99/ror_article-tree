@@ -1,0 +1,24 @@
+.new-session-container {
+  margin: 0 auto;
+  width: 60%;
+  margin-top: 15%;
+
+  input {
+    height: 40px;
+    padding: 0 10px;
+    color: $fontColor;
+    font-size: 16px;
+  }
+
+  input:focus {
+    outline: none;
+  }
+
+  .new-session-username {
+    width: 60%;
+  }
+
+  .new-session-button {
+    width: 20%;
+  }
+}
