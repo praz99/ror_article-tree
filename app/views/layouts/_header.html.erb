@@ -16,6 +16,7 @@
     <% categ.each do |cat| %>
       <%= link_to cat.name, category_path(cat) %>
     <% end %>
+    <%= link_to 'all categories', categories_path %>
   </div>
 
   <div class="nav-right">

@@ -103,13 +103,13 @@
       }
 
       .show-article-title a {
-        color: #615856;
+        color: $fontColor;
         font-weight: 900;
         text-transform: capitalize;
       }
 
       .show-article-text {
-        color: #615856;
+        color: $fontColor;
         font-size: 16px;
       }
 
@@ -120,7 +120,7 @@
         display: flex;
         justify-content: space-between;
         width: 90%;
-        color: #615856;
+        color: $fontColor;
         font-size: 14px;
 
         .show-article-vote a {
