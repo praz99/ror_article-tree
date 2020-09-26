@@ -3,6 +3,7 @@ class Article < ApplicationRecord
   validates :title, presence: true
 
   has_one_attached :image
+  validates :image, presence: true
   validate :accepted_image
 
   has_many :votes, dependent: :destroy

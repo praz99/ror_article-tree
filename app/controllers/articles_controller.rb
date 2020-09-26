@@ -13,10 +13,10 @@ class ArticlesController < ApplicationController
     @article = current_user.authored_articles.build(article_params)
     @article.categorizes.build(category_id: params[:article][:category_ids])
     if @article.save
-      flash[:success] = 'Article Created!'
+      flash[:notice] = 'Article Created!'
       redirect_to @article
     else
-      flash[:danger] = 'Something went wrong'
+      flash[:alert] = 'Something went wrong'
       render 'new'
     end
   end
@@ -27,20 +27,20 @@ class ArticlesController < ApplicationController
 
   def update
     if @article.update(article_params)
-      flash[:success] = 'Article edit success!'
+      flash[:notice] = 'Article edit success!'
       redirect_to @article
     else
-      flash[:danger] = 'Something went wrong'
+      flash[:alert] = 'Something went wrong'
       render 'edit'
     end
   end
 
   def destroy
     if @article.destroy
-      flash[:success] = 'Article delete success!'
+      flash[:notice] = 'Article delete success!'
       redirect_to articles_path
     else
-      flash[:danger] = 'Something went wrong!'
+      flash[:alert] = 'Something went wrong!'
       redirect_to @article
     end
   end
