@@ -1,12 +1,14 @@
-<h1 class="text-center">Sign up</h1>
-<div class="row">
-  <div class="col-md-4 offset-4">
-    <%= form_with(model: @user, local: true) do |f| %>
-      <%= render 'shared/error_messages', error_resource: @user %>
-      <% f.label :name %>
-      <%= f.text_field :name, autofocus: true, class: 'mb-1 form-control' %>
+<%= form_with(model: @user, local: true) do |f| %>
+  <%= render 'shared/error_messages', error_resource: @user %>
+  <div class="new-user-container">
+    <%= f.text_field :name, autofocus: true, class: 'new-user-username', placeholder: 'Enter a unique username' %>
+    <%= f.submit 'Register', class: 'new-user-button' %>
+  </div>      
+<% end %>
 
-      <%= f.submit 'Register', class: 'mt-2 btn btn-primary' %>
-    <% end %>
-  </div>
+<div class="new-user-information">
+  <h3>Registger Now</h3>
+  <p>Become a member of Article Tree</p>
+  <p>Enter a unique username and start writing the articles.</p>
+  <p>You can still read all articles without registering.</p>
 </div>

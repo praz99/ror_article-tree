@@ -1,3 +1,44 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+//user registration
+.new-user-container {
+  margin: 0 auto;
+  width: 60%;
+  margin-top: 15%;
+
+  input {
+    height: 40px;
+    padding: 0 10px;
+    color: $fontColor;
+    font-size: 16px;
+  }
+
+  input:focus {
+    outline: none;
+  }
+
+  .new-user-username {
+    width: 79%;
+  }
+
+  .new-user-button {
+    width: 20%;
+  }
+}
+
+.new-user-information {
+  color: #353130;
+  // background: green;
+  width: 40%;
+  height: auto;
+  position: absolute;
+  bottom: 40%;
+  left: 25%;
+
+  h3 {
+    color: $categoryNameColor;
+    padding-bottom: 5px;
+  }
+}
