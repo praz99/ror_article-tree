@@ -11,9 +11,17 @@
 
 <div class="categories">
   <% @categories.each do |cat| %>
-    <div class="single-category" style="background-image: url(<%= (url_for(cat.articles.last.image)) %>)">
+    <div class="single-category" style="background-image: url(
+      <% if cat.articles.exists? %>
+        <%= (url_for(cat.articles.last.image)) %>)
+      <% end %>
+      ">
       <div class="title-category"><%=link_to cat.name, category_path(cat) %></div>
-      <div class="title-latest"><%= cat.articles.last.title %></div>
+      <% if cat.articles.exists? %>
+        <div class="title-latest"><%= cat.articles.last.title %></div>
+      <% else %>
+        <p>No Articles</p>
+      <% end %>
     </div>
   <% end %>
 </div>

@@ -185,3 +185,34 @@
     }
   }
 }
+
+// all category page
+
+.index-category-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  .index-category-single {
+    background: $backgroundColor;
+    background-size: 100%;
+    background-position: top;
+    background-repeat: no-repeat;
+    height: 34.6vh;
+
+    .index-category-name {
+      padding: 1em;
+    }
+
+    a {
+      color: $categoryNameColor;
+      text-transform: uppercase;
+      font-size: 1.1em;
+      font-weight: 700;
+    }
+
+    .index-category-articles-count {
+      color: $categoryNameColor;
+      font-size: 14px;
+    }
+  }
+}

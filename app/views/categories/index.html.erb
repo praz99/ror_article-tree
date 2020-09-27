@@ -1,9 +1,20 @@
-<% @categories.each do |category| %>
-  <%= category.name %><br />
-  <% if category.articles.exists? %>
-    <h4><%= category.articles.last.title %></h4>
-    <%= image_tag category.articles.last.image.variant(resize_to_limit: [300, 300]) %><br />
-  <% else %>
-    <p>no articles</p>
+<div class="index-category-container">
+  <% @categories.each do |category| %>
+    <div class="index-category-single" style="background-image: url(
+      <% if category.articles.exists? %>
+        <%= (url_for(category.articles.last.image)) %>)
+      <% end %>
+      ">
+      <div class="index-category-name">
+        <%= link_to category.name, category_path(category) %><br />
+        <% if category.articles.exists? %>
+          <div class="index-category-articles-count">
+            <%= pluralize(category.articles.size, 'article') %>
+          </div>
+        <% else %>
+          <p class="index-category-articles-count">no articles</p>
+        <% end %>
+      </div>
+    </div>
   <% end %>
-<% end %>
+</div>
