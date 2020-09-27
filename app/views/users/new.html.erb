@@ -1,5 +1,7 @@
 <%= form_with(model: @user, local: true) do |f| %>
-  <%= render 'shared/error_messages', error_resource: @user %>
+  <% if @user.errors.any? %>
+    <%= render 'shared/error_messages', error_resource: @user %>
+  <% end %>
   <div class="new-user-form">
     <div class="new-user-input">
       <%= f.text_field :name, autofocus: true, class: 'new-user-username', placeholder: 'Enter a unique username' %>

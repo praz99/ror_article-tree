@@ -13,7 +13,9 @@
 
   <fieldset class="new-article-form">
     <%= form_with(model: @article, local: true) do |f| %>
-      <%= render 'shared/error_messages', error_resource: @article %>
+      <% if @article.errors.any?%>
+        <%= render 'shared/error_messages', error_resource: @article %>
+      <% end %>
       <div class="new-form-title">
         <%= f.text_field :title, autofocus: true, placeholder: 'Give your article a nice title'%>
       </div>

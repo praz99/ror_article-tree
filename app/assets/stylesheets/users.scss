@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 //user registration
+
 .new-user-form {
   margin: 0 auto;
   width: 60%;
@@ -54,11 +55,9 @@
 
 .new-user-information {
   color: #353130;
-  width: 40%;
   height: auto;
-  position: absolute;
-  bottom: 28%;
-  left: 25%;
+  width: 20%;
+  padding: 10px;
 
   h3 {
     color: $categoryNameColor;
