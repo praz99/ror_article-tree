@@ -64,3 +64,53 @@
     padding-bottom: 5px;
   }
 }
+
+// user show page
+
+.show-user-container {
+  margin: 3em auto;
+  width: 50%;
+  text-align: justify;
+  text-align: center;
+  color: #353130;
+  a {
+    color: #d87d09;
+  }
+
+  h1 {
+    color: $categoryNameColor;
+    text-transform: uppercase;
+    font-size: 2em;
+    padding-top: 0.5em;
+    border-bottom: 3px solid $categoryNameColor;
+  }
+
+  h4 {
+    padding: 1em 0;
+    color: #353130;
+  }
+
+  .show-user-articles {
+    padding: 10px;
+    background: transparentize($color: $backgroundColor, $amount: 0.5);
+
+    .show-user-article-list-options {
+      display: flex;
+
+      .show-user-article-list {
+        width: 70%;
+        text-align: left;
+      }
+
+      .show-user-article-options {
+        width: 30%;
+        text-align: right;
+        padding: 0 5px;
+
+        a {
+          padding: 0 7px;
+        }
+      }
+    }
+  }
+}

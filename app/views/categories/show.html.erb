@@ -14,7 +14,7 @@
         </div>
         <div class="article-vote">
           <div class="show-article-author">
-            written by <strong><%= art.author.name %></strong>
+            written by <strong><%= link_to art.author.name, user_path(art.author) %></strong>
           </div>
           <div class="show-article-vote">
             <% vote = Vote.find_by(article: art, user: current_user) %>
