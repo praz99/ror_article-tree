@@ -1,23 +1,29 @@
-<div class="contailer">
-  <div class="row">
-    <div class="col-sm-6 text-center offset-3">
-      <h1><%= @article.title %></h1>
-        <p><%= @article.text %></p>
-        <% if @article.image.attached? %>
-          <div class="">
-            <%= image_tag @article.image.variant(resize_to_limit: [500, 500]) %>
-          </div>
-        <% end %>
-        <p>Total <%= pluralize(@article.votes.count, 'vote') %></p>
-        <%= link_to 'Back to Articles List', articles_path %> |
+<div class="show-article-container">
+  <div class="show-article-left">
+    <h1><%= @article.title %></h1>
+    <% if @article.image.attached? %>
+      <div class="">
+        <%= image_tag @article.image.variant(resize_to_limit: [700, 700]) %>
+      </div>
+    <% end %>
+  </div>
+  <div class="show-article-right">
+    <article><%= @article.text %></article>
+    <div class="show-article-votes">
+      <p>
+        Was this article interesting? Give it a
         <% vote = Vote.find_by(article: @article, user: current_user) %>
         <% if vote %>
-          <%= link_to 'Vote down', article_vote_path(@article.id, id: vote.id), method: :delete %>
+          <%= link_to article_vote_path(@article.id, id: vote.id), method: :delete do %>
+            <span><i class="fas fa-thumbs-down"></i></span>
+          <% end %>
         <% else %>
-          <%= link_to 'Vote up', article_votes_path(@article), method: :post %>
-        <% end %> |
-        <%= link_to 'Edit', edit_article_path(@article) %> |
-        <%= link_to 'Delete', article_path(@article), method: :delete, data: { confirm: 'Delete this Article? This cannot be undone!' } %>
+          <%= link_to article_votes_path(@article), method: :post do %>
+            <span><i class="fas fa-thumbs-up"></i></span>
+          <% end %>
+        <% end %>
+      </p>
+      <p><%= pluralize(@article.votes.count, 'vote') %></p>
     </div>
   </div>
 </div>
