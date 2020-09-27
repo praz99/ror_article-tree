@@ -4,23 +4,22 @@
 }
 
 .new-article-instruction {
-   width: 30%;
-   margin: 0 auto;
+  width: 30%;
+  margin: 0 auto;
 
-   h1 {
-     color: $categoryNameColor;
-     padding: 1.7em 0;
-   }
+  h1 {
+    color: $categoryNameColor;
+    padding: 1.7em 0;
+  }
 
-   article {
-     color: #3d3c3c;
-     line-height: 1.5em;
+  article {
+    color: #3d3c3c;
+    line-height: 1.5em;
 
-     a {
-       color: $categoryNameColor;
-     }
-   }
-
+    a {
+      color: $categoryNameColor;
+    }
+  }
 }
 
 .new-article-form {
@@ -30,14 +29,17 @@
   border: none;
   padding-bottom: 10px;
 
-  input:focus, textarea:focus, select:focus {
-    outline: none;
-  }
-
-  input, textarea {
+  input,
+  textarea {
     padding: 10px;
     color: $fontColor;
     font-size: 16px;
+  }
+
+  input:focus,
+  textarea:focus,
+  select:focus {
+    outline: none;
   }
 
   .new-form-title {
@@ -60,7 +62,7 @@
 
   .new-form-category-image {
     display: flex;
-    
+
     .new-form-category {
       width: 50%;
 
@@ -72,7 +74,7 @@
 
     .new-form-image {
       width: 50%;
-      color: #3d3533
+      color: #3d3533;
     }
 
     .new-form-image-input {

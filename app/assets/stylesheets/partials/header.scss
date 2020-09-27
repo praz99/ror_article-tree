@@ -11,6 +11,7 @@
   padding: 5px 0;
   font-weight: bold;
   white-space: nowrap;
+
   a {
     color: $backgroundColor;
     font-size: 15px;
@@ -35,6 +36,19 @@
     }
   }
 
+  .nav-right {
+    display: flex;
+    justify-content: flex-end;
+    width: 25%;
+    text-transform: uppercase;
+    border-bottom: 4px solid gray;
+    padding: 16px 0;
+
+    a {
+      padding: 0 6px;
+    }
+  }
+
   .nav-center {
     display: flex;
     justify-content: center;
@@ -49,19 +63,6 @@
 
     a:last-child {
       padding-left: 50px;
-    }
-  }
-
-  .nav-right {
-    display: flex;
-    justify-content: flex-end;
-    width: 25%;
-    text-transform: uppercase;
-    border-bottom: 4px solid gray;
-    padding: 16px 0;
-
-    a {
-      padding: 0 6px;
     }
   }
 }

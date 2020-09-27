@@ -2,7 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-
 // article show page
 
 .show-article-container {
@@ -12,6 +11,7 @@
 
   .show-article-left {
     width: 45%;
+
     h1 {
       color: $categoryNameColor;
       padding-bottom: 1em;
@@ -35,7 +35,7 @@
       justify-content: space-between;
       padding: 15px;
 
-      p a  span{
+      p a span {
         color: $footerLinksColor;
         padding-left: 10px;
       }

@@ -2,12 +2,43 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+// all category page
+
+.index-category-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  .index-category-single {
+    background: $backgroundColor;
+    background-size: 100%;
+    background-position: top;
+    background-repeat: no-repeat;
+    height: 34.6vh;
+
+    .index-category-name {
+      padding: 1em;
+    }
+
+    a {
+      color: $categoryNameColor;
+      text-transform: uppercase;
+      font-size: 1.1em;
+      font-weight: 700;
+    }
+
+    .index-category-articles-count {
+      color: $categoryNameColor;
+      font-size: 14px;
+    }
+  }
+}
+
 // home page layout
 
 .featured_article {
   height: 55vh;
   width: 100%;
-  background: $backgroundColor;    
+  background: $backgroundColor;
   background-size: 40%;
   background-position: center;
   background-repeat: no-repeat;
@@ -48,7 +79,9 @@
       text-decoration: underline $footerLinksColor;
     }
 
-    .title-category, .title-category a, .title-latest {
+    .title-category,
+    .title-category a,
+    .title-latest {
       color: white;
       font-size: 16px;
       font-weight: bold;
@@ -130,7 +163,8 @@
     }
   }
 
-  .show-article:nth-child(4n+3), .show-article:nth-child(4n+4) {
+  .show-article:nth-child(4n+3),
+  .show-article:nth-child(4n+4) {
     flex-direction: row-reverse;
   }
 }
@@ -182,37 +216,6 @@
       text-align: center;
       margin-left: 2px;
       padding-top: 5px;
-    }
-  }
-}
-
-// all category page
-
-.index-category-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-
-  .index-category-single {
-    background: $backgroundColor;
-    background-size: 100%;
-    background-position: top;
-    background-repeat: no-repeat;
-    height: 34.6vh;
-
-    .index-category-name {
-      padding: 1em;
-    }
-
-    a {
-      color: $categoryNameColor;
-      text-transform: uppercase;
-      font-size: 1.1em;
-      font-weight: 700;
-    }
-
-    .index-category-articles-count {
-      color: $categoryNameColor;
-      font-size: 14px;
     }
   }
 }

@@ -1,5 +1,5 @@
 class CategoriesController < ApplicationController
-  before_action :logged_in_user, except: [:home, :show, :index]
+  before_action :logged_in_user, except: %i[home show index]
   before_action :set_category, only: %I[show edit upddate destroy]
 
   def index

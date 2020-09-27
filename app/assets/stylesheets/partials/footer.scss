@@ -20,6 +20,7 @@ footer {
 
   .footer-left {
     width: 20%;
+
     .nav-logo {
       height: auto;
       width: 110px;
@@ -29,10 +30,11 @@ footer {
   .footer-center {
     display: flex;
     justify-content: center;
-    align-items:  center;
+    align-items: center;
     width: 55%;
 
-    a, p {
+    a,
+    p {
       padding: 8px;
     }
   }
@@ -54,7 +56,7 @@ footer {
       cursor: pointer;
       width: 30px;
       height: 30px;
-      padding: 0px;
+      padding: 0;
       margin: 2px;
       text-decoration: none;
       text-align: center;
@@ -62,26 +64,26 @@ footer {
       font-size: 20px;
       line-height: 1.7em;
       border-radius: 27px;
-      -moz-border-radius:27px;
-      -webkit-border-radius:27px;
+      -moz-border-radius: 27px;
+      -webkit-border-radius: 27px;
       background: $footerLinksColor;
     }
 
-    /* facebook button class*/
-      .facebookBtn:before {
-      font-family: "FontAwesome";
+    /* facebook button class */
+    .facebookBtn::before {
+      font-family: "FontAwesome", sans-serif;
       content: "\f39e";
     }
 
-    /* twitter button class*/
-    .twitterBtn:before {
-      font-family: "FontAwesome";
+    /* twitter button class */
+    .twitterBtn::before {
+      font-family: "FontAwesome", sans-serif;
       content: "\f099";
     }
 
     /* instagram button class */
-    .instagramBtn:before {
-      font-family: "FontAwesome";
+    .instagramBtn::before {
+      font-family: "FontAwesome", sans-serif;
       content: "\f16d";
     }
   }
