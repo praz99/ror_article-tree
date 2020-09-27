@@ -1,8 +1,13 @@
 <%= form_with(model: @user, local: true) do |f| %>
   <%= render 'shared/error_messages', error_resource: @user %>
-  <div class="new-user-container">
-    <%= f.text_field :name, autofocus: true, class: 'new-user-username', placeholder: 'Enter a unique username' %>
-    <%= f.submit 'Register', class: 'new-user-button' %>
+  <div class="new-user-form">
+    <div class="new-user-input">
+      <%= f.text_field :name, autofocus: true, class: 'new-user-username', placeholder: 'Enter a unique username' %>
+    </div>
+    <div class="new-user-btn">
+      <%= f.submit 'Register', class: 'btn btn-submit' %>
+      <%= link_to 'Cancel', :back, class: 'btn btn-cancel' %>
+    </div>
   </div>      
 <% end %>
 
