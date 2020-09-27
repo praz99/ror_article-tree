@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
       flash[:notice] = "Hello #{user.name}! Welcome back."
       redirect_back_or root_path
     else
-      flash.now[:alert] = 'Invalid Name'
+      flash.now[:alert] = 'Invalid username'
       render 'new'
     end
   end

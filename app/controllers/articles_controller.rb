@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: %i[show edit update destroy]
-  before_action :logged_in_user, only: %i[new upddate destroy]
+  before_action :logged_in_user, only: %i[new update destroy]
   def index
     @articles = Article.all.order('created_at DESC')
   end
@@ -13,7 +13,7 @@ class ArticlesController < ApplicationController
     @article = current_user.authored_articles.build(article_params)
     @article.categorizes.build(category_id: params[:article][:category_ids])
     if @article.save
-      flash[:notice] = 'Article Created!'
+      flash[:notice] = 'Article created successfully!'
       redirect_to @article
     else
       render 'new'
@@ -26,7 +26,7 @@ class ArticlesController < ApplicationController
 
   def update
     if @article.update(article_params)
-      flash[:notice] = 'Article edit success!'
+      flash[:notice] = 'Article edited successfully!'
       redirect_to @article
     else
       render 'edit'
@@ -35,7 +35,7 @@ class ArticlesController < ApplicationController
 
   def destroy
     if @article.destroy
-      flash[:notice] = 'Article delete success!'
+      flash[:notice] = 'Article deleted successfully!'
       redirect_to articles_path
     else
       flash[:alert] = 'Something went wrong!'
