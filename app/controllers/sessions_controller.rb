@@ -5,6 +5,7 @@ class SessionsController < ApplicationController
     user = User.find_by(name: params[:session][:name].downcase)
     if user
       log_in user
+      flash[:notice] = "Hello #{user.name}! Welcome back."
       redirect_back_or root_path
     else
       flash.now[:alert] = 'Invalid Name'

@@ -16,7 +16,6 @@ class ArticlesController < ApplicationController
       flash[:notice] = 'Article Created!'
       redirect_to @article
     else
-      flash[:alert] = 'Something went wrong'
       render 'new'
     end
   end
@@ -30,7 +29,6 @@ class ArticlesController < ApplicationController
       flash[:notice] = 'Article edit success!'
       redirect_to @article
     else
-      flash[:alert] = 'Something went wrong'
       render 'edit'
     end
   end

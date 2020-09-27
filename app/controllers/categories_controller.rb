@@ -21,7 +21,6 @@ class CategoriesController < ApplicationController
       flash[:notice] = 'You created a new category!'
       redirect_to root_path
     else
-      flash[:alert] = 'Something went wrong!'
       render 'new'
     end
   end

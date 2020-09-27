@@ -1,0 +1,19 @@
+.flash {
+  position: absolute;
+  right: 20px;
+  top: 70px;
+  width: 30%;
+  border-radius: 3px;
+  z-index: 20;
+  padding: 5px;
+}
+
+.flash-notice {
+  background: transparentize($color: green, $amount: 0.7);
+  border: 1px solid green;
+}
+
+.flash-alert {
+  background: transparentize($color: red, $amount: 0.7);
+  border: 1px solid red;
+}
