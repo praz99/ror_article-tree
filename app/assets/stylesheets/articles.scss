@@ -42,3 +42,22 @@
     }
   }
 }
+
+// article index page
+.index-article-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  row-gap: 2em;
+  padding: 2em;
+
+  h2 {
+    color: $categoryNameColor;
+    padding: 2em 0 0 2em;
+  }
+
+  .index-article-single {
+    p a {
+      color: $categoryNameColor;
+    }
+  }
+}
