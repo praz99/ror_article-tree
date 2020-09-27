@@ -129,4 +129,8 @@
       }
     }
   }
+
+  .show-article:nth-child(4n+3), .show-article:nth-child(4n+4) {
+    flex-direction: row-reverse;
+  }
 }
