@@ -134,3 +134,54 @@
     flex-direction: row-reverse;
   }
 }
+
+//new category page layout
+
+.new-category-form {
+  margin: 0 auto;
+  width: 40%;
+  margin-top: 15%;
+  display: flex;
+  flex-direction: column;
+
+  .new-category-input {
+    padding: 10px 0;
+  }
+
+  input {
+    height: 40px;
+    padding: 0 10px;
+    color: $fontColor;
+    font-size: 16px;
+    width: 100%;
+  }
+
+  input:focus {
+    outline: none;
+  }
+
+  .new-category-btn {
+    display: flex;
+    justify-content: center;
+
+    .btn {
+      background: $backgroundColor;
+      border-radius: 4px;
+      border: 1px solid #4c4c4c;
+      height: 34px;
+      color: white;
+      width: 50%;
+    }
+
+    .btn-submit {
+      margin-right: 2px;
+      cursor: pointer;
+    }
+
+    .btn-cancel {
+      text-align: center;
+      margin-left: 2px;
+      padding-top: 5px;
+    }
+  }
+}

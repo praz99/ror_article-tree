@@ -1,13 +1,15 @@
-<div class="row">
-  <div class="col-md-4 offset-4">
-    <h2>Create new category for articles</h2>
-      <%= form_with(model: @category, local: true) do |f| %>
-        <%= render 'shared/error_messages', error_resource: @category %>
-        <%= f.text_field :name, autofocus: true, placeholder: 'name', class: 'my-2 form-control' %>
-        <%= f.number_field :priority, placeholder: 'give it a priority number', class: 'my-2 form-control' %>
-
-        <%= f.submit 'Submit', class: 'btn btn-primary' %>
-      <% end %>
-    <%= link_to 'Cancel', :back %>
+<%= form_with(model: @category, local: true) do |f| %>
+  <%= render 'shared/error_messages', error_resource: @category %>
+  <div class="new-category-form">
+    <div class="new-category-input">
+      <%= f.text_field :name, autofocus: true, placeholder: 'name' %>
+    </div>
+    <div class="new-category-input">
+      <%= f.number_field :priority, placeholder: 'give it a priority number' %>
+    </div>
+    <div class="new-category-btn">
+      <%= f.submit 'Submit', class: 'btn btn-submit' %>
+      <%= link_to 'Cancel', :back, class: 'btn btn-cancel' %>
+    </div>
   </div>
-</div>
+<% end %>
