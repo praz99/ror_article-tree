@@ -45,6 +45,16 @@
   position: relative;
   color: white;
 
+  .featured-article-gradient {
+    height: 55vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(49, 33, 33, 0.9));
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    color: white;
+  }
+
   .info {
     position: absolute;
     bottom: 10px;
