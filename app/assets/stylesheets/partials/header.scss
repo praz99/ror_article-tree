@@ -13,12 +13,12 @@
   white-space: nowrap;
 
   a {
-    color: $backgroundColor;
+    color: rgb(78, 68, 63);
     font-size: 15px;
   }
 
   a:hover {
-    color: $footerLinksColor;
+    color: rgb(238, 94, 44);
   }
 
   .nav-left {
@@ -27,7 +27,7 @@
     width: 20%;
     text-transform: uppercase;
     text-align: center;
-    border-bottom: 4px solid $footerLinksColor;
+    border-bottom: 4px solid rgb(238, 94, 44);
 
     .nav-logo {
       height: auto;

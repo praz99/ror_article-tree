@@ -5,7 +5,7 @@ footer {
   position: fixed;
   bottom: 0;
   left: 0;
-  background: $backgroundColor;
+  background: rgb(78, 68, 63);
   z-index: 10;
   font-size: 14px;
   padding: 0 10px;
@@ -15,7 +15,7 @@ footer {
   }
 
   a {
-    color: $footerLinksColor;
+    color: rgb(238, 94, 44);
   }
 
   .footer-left {
@@ -60,13 +60,13 @@ footer {
       margin: 2px;
       text-decoration: none;
       text-align: center;
-      color: $backgroundColor;
+      color: rgb(78, 68, 63);
       font-size: 20px;
       line-height: 1.7em;
       border-radius: 27px;
       -moz-border-radius: 27px;
       -webkit-border-radius: 27px;
-      background: $footerLinksColor;
+      background: rgb(238, 94, 44);
     }
 
     /* facebook button class */
