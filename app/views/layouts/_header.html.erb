@@ -5,9 +5,7 @@
       <%= image_tag 'logo-new.png', class: 'nav-logo'%>
     <% end %>
     </div>
-    <% if logged_in? %>
-      <%= link_to 'Write an Article', new_article_path %>
-    <% end %>
+    <%= login_check_left %>
   </div>
 
   <div class="nav-center">
@@ -20,12 +18,6 @@
   </div>
 
   <div class="nav-right">
-    <% if logged_in? %>
-      <%= link_to current_user.name, user_path(current_user) %> |
-      <%= link_to "log out", logout_path, method: :delete %>
-    <% else %>
-      <%= link_to "Log in", login_path %> |
-      <%= link_to "Register", signup_path %>
-    <% end %>
+    <%= login_check_right %>
   </div>
 </nav>

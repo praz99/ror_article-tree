@@ -17,16 +17,7 @@
             written by <strong><%= link_to art.author.name, user_path(art.author) %></strong>
           </div>
           <div class="show-article-vote">
-            <% vote = Vote.find_by(article: art, user: current_user) %>
-            <% if vote %>
-              <%= link_to article_vote_path(art.id, id: vote.id), method: :delete do %>
-                <span><i class="fas fa-thumbs-down"></i></span>
-              <% end %>
-            <% else %>
-              <%= link_to article_votes_path(art), method: :post do %>
-                <span><i class="fas fa-thumbs-up"></i></span>
-              <% end %>
-            <% end %>
+            <%= show_vote(art) %>
             <%= pluralize(art.votes.count, 'vote') %>
           </div>
         </div>

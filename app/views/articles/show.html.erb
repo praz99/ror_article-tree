@@ -1,28 +1,12 @@
 <div class="show-article-container">
   <div class="show-article-left">
     <h1><%= @article.title %></h1>
-    <% if @article.image.attached? %>
-      <div class="">
-        <%= image_tag @article.image.variant(resize_to_limit: [700, 700]) %>
-      </div>
-    <% end %>
+    <%= show_image_check %>
   </div>
   <div class="show-article-right">
     <article><%= @article.text %></article>
     <div class="show-article-votes">
-      <p>
-        Was this article interesting? Give it a
-        <% vote = Vote.find_by(article: @article, user: current_user) %>
-        <% if vote %>
-          <%= link_to article_vote_path(@article.id, id: vote.id), method: :delete do %>
-            <span><i class="fas fa-thumbs-down"></i></span>
-          <% end %>
-        <% else %>
-          <%= link_to article_votes_path(@article), method: :post do %>
-            <span><i class="fas fa-thumbs-up"></i></span>
-          <% end %>
-        <% end %>
-      </p>
+      <p>Was this article interesting? Give it a <%= show_vote(@article) %></p>
       <p><%= pluralize(@article.votes.count, 'vote') %></p>
     </div>
   </div>

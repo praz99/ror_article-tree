@@ -1,7 +1,5 @@
 <%= form_with(model: @category, local: true) do |f| %>
-  <% if @category.errors.any?%>
-    <%= render 'shared/error_messages', error_resource: @category %>
-  <% end %>
+  <%= check_error(@category) %>
   <div class="new-category-form">
     <div class="new-category-input">
       <%= f.text_field :name, autofocus: true, placeholder: 'name' %>

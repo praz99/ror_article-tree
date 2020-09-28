@@ -13,9 +13,7 @@
 
   <fieldset class="new-article-form">
     <%= form_with(model: @article, local: true) do |f| %>
-      <% if @article.errors.any?%>
-        <%= render 'shared/error_messages', error_resource: @article %>
-      <% end %>
+      <%= check_error(@article) %>
       <div class="new-form-title">
         <%= f.text_field :title, autofocus: true, placeholder: 'Give your article a nice title'%>
       </div>
@@ -24,12 +22,7 @@
       </div>
       <div class="new-form-category-image">
         <div class="new-form-image">
-          <% if @article.image.attached? %>
-            <%= image_tag @article.image.variant(resize_to_limit: [100, 100]) %>
-            <%= f.label :image, 'Change this image?' %>
-          <% else %>
-            <%= f.label :image, 'Add a suitable image for your article' %>
-          <% end %>
+          <%= form_image_check(f) %>
           <div class="new-form-image-input">
             <%= f.file_field :image %>
           </div>
