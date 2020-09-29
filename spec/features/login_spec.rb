@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'login', type: :feature do
+RSpec.describe 'login', type: :feature do
   before(:example) do
     visit signup_path
     expect(page).to have_content('Enter a unique username')
