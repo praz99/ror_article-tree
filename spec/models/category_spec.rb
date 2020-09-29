@@ -16,7 +16,7 @@ RSpec.describe Category, type: :model do
     end
 
     it 'should have name between 3 and 30 characters' do
-      category1 = build(:category, name: 'xyz')
+      category1 = build(:category, name: 'xyz', priority: 13)
       expect(category1).to be_valid
     end
 
@@ -43,6 +43,11 @@ RSpec.describe Category, type: :model do
     it 'priority should be only integer number' do
       category1 = build(:category, name: 'politics', priority: 1)
       expect(category1).to be_valid
+    end
+
+    it 'should have a unique priority' do
+      category1 = build(:category, name: 'science', priority: 12)
+      expect(category1).to_not be_valid
     end
   end
 

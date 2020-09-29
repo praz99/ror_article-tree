@@ -93,6 +93,12 @@ After cloning the app, enter following commands in your terminal.
 bundle install
 ```
 ```js
+yarn install --check-files
+```
+```js
+rails db:create
+```
+```js
 rails db:migrate
 ```
 ```js
