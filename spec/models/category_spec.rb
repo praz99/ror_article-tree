@@ -5,7 +5,7 @@ RSpec.describe Category, type: :model do
     @category1 = create(:category)
   end
 
-  context 'ActiveModelValidations' do
+  describe 'ActiveModelValidations' do
     it 'is valid with valid attributes' do
       expect(@category1).to be_valid
     end
@@ -46,7 +46,7 @@ RSpec.describe Category, type: :model do
     end
   end
 
-  context 'ActiveRecordAssociations' do
+  describe 'ActiveRecordAssociations' do
     it 'has many articles' do
       a = described_class.reflect_on_association(:articles)
       expect(a.macro).to eq(:has_many)

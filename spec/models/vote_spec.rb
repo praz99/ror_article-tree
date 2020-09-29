@@ -6,7 +6,9 @@ RSpec.describe Vote, type: :model do
       create(:user) do |user|
         @article1 = user.authored_articles.create(attributes_for(:article))
         @article1.image.attach(
-          io: File.open(Rails.root.join('spec', 'factories', 'dom-hill-nimElTcTNyY-unsplash.jpg')), filename: 'dom-hill-nimElTcTNyY-unsplash.jpg', content_type: 'image/jpg'
+          io: File.open(Rails.root.join('spec', 'factories', 'dom-hill-nimElTcTNyY-unsplash.jpg')),
+          filename: 'dom-hill-nimElTcTNyY-unsplash.jpg',
+          content_type: 'image/jpg'
         )
         @vote1 = user.votes.build(article_id: @article1.id)
       end
