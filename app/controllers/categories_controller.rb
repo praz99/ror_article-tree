@@ -26,7 +26,7 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    @articles = @category.articles.order('created_at DESC')
+    @articles = @category.articles.order('created_at DESC').includes(:author)
   end
 
   private
