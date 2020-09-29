@@ -67,7 +67,7 @@ This is the capstone project for the Ruby on Rails section of [Microverse](https
 * An article with highest number of votes is shown as the featured article on the home page of the app.
 
 ## Live demo
-[Here]() is the live demo of my work.
+[Here](https://serene-reaches-80199.herokuapp.com/) is the live demo of my work.
 
 ## Built With
 
