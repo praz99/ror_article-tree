@@ -1,16 +1,4 @@
-<div class="featured_article" style="background-image: url(<%= (url_for(@featured_article.image)) %>")>
-  <div class="featured-article-gradient">
-    <div class="info">
-      <div class="feat-title">
-        <%= link_to @featured_article.title, article_path(@featured_article) %>
-      </div>
-      <div class="feat-text">
-        <%= @featured_article.text.truncate(300) %>
-      </div>
-    </div>
-  </div>
-</div>
-
+<%= featured_article_check %>
 <div class="categories">
   <% @categories.each do |cat| %>
     <div class="single-category" style="background-image: url(<%= background_check(cat) %>)">

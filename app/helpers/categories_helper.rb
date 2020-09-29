@@ -18,4 +18,12 @@ module CategoriesHelper
       content_tag(:p, 'no articles', class: ['index-category-articles-count'])
     end
   end
+
+  def featured_article_check
+    if @featured_article.blank?
+      render 'categories/partials/featured_article_missing'
+    else
+      render 'categories/partials/featured_article_exists'
+    end
+  end
 end

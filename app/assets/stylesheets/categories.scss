@@ -2,6 +2,24 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+// no featured article
+
+.no-featured-article {
+  border: 1px solid rgb(238, 94, 44);
+  margin: 5em 1em 1em;
+  padding: 10px;
+  line-height: 2em;
+
+  h1,
+  h3 {
+    color: rgb(151, 63, 33);
+  }
+
+  li a {
+    color: rgb(151, 63, 33);
+  }
+}
+
 // all category page
 
 .index-category-container {
