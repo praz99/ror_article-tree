@@ -95,6 +95,9 @@ bundle install
 ```js
 rails db:migrate
 ```
+```js
+rails server
+```
 Open https://localhost:3000/ in your browser
 
 ### Testing
