@@ -1,0 +1,6 @@
+<div class="error-container">
+  <h5>Sorry, but you did not do it right.</h5>
+  <% error_resource.errors.full_messages.each do |error| %>
+    <p><%= error %></p>
+  <% end %>
+</div>

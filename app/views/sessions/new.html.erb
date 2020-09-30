@@ -1,0 +1,7 @@
+<div class="new-session-container">
+  <%= form_with(url: login_path, scope: :session, local: true) do |f| %>
+    <span>Username </span>
+    <%= f.text_field :name, class: 'new-session-username', autofocus: true; %>
+    <%= f.submit 'Log in', class: 'new-session-button' %>
+  <% end %>
+</div>

@@ -1,0 +1,117 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+//user registration
+
+.new-user-form {
+  margin: 0 auto;
+  width: 60%;
+  margin-top: 15%;
+  display: flex;
+  flex-direction: column;
+
+  .new-user-input {
+    padding: 10px 0;
+  }
+
+  input {
+    height: 40px;
+    padding: 0 10px;
+    color: #615856;
+    font-size: 16px;
+    width: 100%;
+  }
+
+  input:focus {
+    outline: none;
+  }
+
+  .new-user-btn {
+    display: flex;
+    justify-content: center;
+
+    .btn {
+      background: rgb(78, 68, 63);
+      border-radius: 4px;
+      border: 1px solid #4c4c4c;
+      height: 34px;
+      color: white;
+      width: 50%;
+    }
+
+    .btn-submit {
+      margin-right: 2px;
+      cursor: pointer;
+    }
+
+    .btn-cancel {
+      text-align: center;
+      margin-left: 2px;
+      padding-top: 5px;
+    }
+  }
+}
+
+.new-user-information {
+  color: #353130;
+  height: auto;
+  width: 20%;
+  padding: 10px;
+
+  h3 {
+    color: rgb(245, 157, 50);
+    padding-bottom: 5px;
+  }
+}
+
+// user show page
+
+.show-user-container {
+  margin: 3em auto;
+  width: 50%;
+  text-align: justify;
+  text-align: center;
+  color: #353130;
+
+  a {
+    color: #d87d09;
+  }
+
+  h1 {
+    color: rgb(245, 157, 50);
+    text-transform: uppercase;
+    font-size: 2em;
+    padding-top: 0.5em;
+    border-bottom: 3px solid rgb(245, 157, 50);
+  }
+
+  h4 {
+    padding: 1em 0;
+    color: #353130;
+  }
+
+  .show-user-articles {
+    padding: 10px;
+    background: transparentize($color: rgb(78, 68, 63), $amount: 0.5);
+
+    .show-user-article-list-options {
+      display: flex;
+
+      .show-user-article-list {
+        width: 70%;
+        text-align: left;
+      }
+
+      .show-user-article-options {
+        width: 30%;
+        text-align: right;
+        padding: 0 5px;
+
+        a {
+          padding: 0 7px;
+        }
+      }
+    }
+  }
+}

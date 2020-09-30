@@ -1,0 +1,15 @@
+<%= form_with(model: @category, local: true) do |f| %>
+  <%= check_error(@category) %>
+  <div class="new-category-form">
+    <div class="new-category-input">
+      <%= f.text_field :name, autofocus: true, placeholder: 'name' %>
+    </div>
+    <div class="new-category-input">
+      <%= f.number_field :priority, placeholder: 'give it a priority number' %>
+    </div>
+    <div class="new-category-btn">
+      <%= f.submit 'Submit', class: 'btn btn-submit' %>
+      <%= link_to 'Cancel', :back, class: 'btn btn-cancel' %>
+    </div>
+  </div>
+<% end %>

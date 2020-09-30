@@ -1,0 +1,63 @@
+// Place all the styles related to the Articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+// article show page
+
+.show-article-container {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 2em;
+
+  .show-article-left {
+    width: 45%;
+
+    h1 {
+      color: rgb(245, 157, 50);
+      padding-bottom: 1em;
+    }
+  }
+
+  .show-article-right {
+    width: 45%;
+    padding: 4.3em 1em 1em 1.5em;
+    text-align: justify;
+    color: #353130;
+
+    article {
+      text-indent: 3em;
+      border: 2px solid rgb(238, 94, 44);
+      padding: 15px;
+    }
+
+    .show-article-votes {
+      display: flex;
+      justify-content: space-between;
+      padding: 15px;
+
+      p a span {
+        color: rgb(238, 94, 44);
+        padding-left: 10px;
+      }
+    }
+  }
+}
+
+// article index page
+.index-article-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  row-gap: 2em;
+  padding: 2em;
+
+  h2 {
+    color: rgb(245, 157, 50);
+    padding: 2em 0 0 2em;
+  }
+
+  .index-article-single {
+    p a {
+      color: rgb(245, 157, 50);
+    }
+  }
+}

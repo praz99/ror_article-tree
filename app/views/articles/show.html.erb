@@ -1,0 +1,13 @@
+<div class="show-article-container">
+  <div class="show-article-left">
+    <h1><%= @article.title %></h1>
+    <%= show_image_check %>
+  </div>
+  <div class="show-article-right">
+    <article><%= @article.text %></article>
+    <div class="show-article-votes">
+      <p>Was this article interesting? Give it a <%= show_vote(@article) %></p>
+      <p><%= pluralize(@article.votes.count, 'vote') %></p>
+    </div>
+  </div>
+</div>

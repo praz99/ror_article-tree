@@ -4,12 +4,19 @@
     <title>RorCapstoneArticleTree</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7d6392431b.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
+    <%= render 'layouts/header' %>
+      <% flash.each do |message_type, message| %>
+        <div class="flash flash-<%=message_type%>"><%= message %></div>
+      <% end %>
+      </div>
     <%= yield %>
+    <%= render 'layouts/footer' %>
   </body>
 </html>
