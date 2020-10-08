@@ -1,0 +1,68 @@
+.navbar {
+  background: white;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  padding: 5px 0;
+  font-weight: bold;
+  white-space: nowrap;
+
+  a {
+    color: rgb(78, 68, 63);
+    font-size: 15px;
+  }
+
+  a:hover {
+    color: rgb(238, 94, 44);
+  }
+
+  .nav-left {
+    display: flex;
+    align-items: center;
+    width: 20%;
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: 4px solid rgb(238, 94, 44);
+
+    .nav-logo {
+      height: auto;
+      width: 110px;
+      padding-right: 10px;
+    }
+  }
+
+  .nav-right {
+    display: flex;
+    justify-content: flex-end;
+    width: 25%;
+    text-transform: uppercase;
+    border-bottom: 4px solid gray;
+    padding: 16px 0;
+
+    a {
+      padding: 0 6px;
+    }
+  }
+
+  .nav-center {
+    display: flex;
+    justify-content: center;
+    width: 55%;
+    text-transform: uppercase;
+    border-bottom: 4px solid gray;
+    padding: 17px 0;
+
+    a {
+      padding: 0 10px;
+    }
+
+    a:last-child {
+      padding-left: 50px;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+<div class="show-container">
+  <% @articles.each do |art| %>
+    <div class="show-article">
+      <div class="show-article-image"style="background-image: url(<%= (url_for(art.image.variant(resize_to_fit: [490, nil]))) %>")></div>
+      <div class="show-article-description">
+        <div class="show-category-name">
+          <%= art.categories.first.name %>
+        </div>
+        <div class="show-article-title">
+          <%= link_to art.title, article_path(art) %>
+        </div>
+        <div class="show-article-text">
+        <%= art.text.truncate(250) %>
+        </div>
+        <div class="article-vote">
+          <div class="show-article-author">
+            written by <strong><%= link_to art.author.name, user_path(art.author) %></strong>
+          </div>
+          <div class="show-article-vote">
+            <%= show_vote(art) %>
+            <%= pluralize(art.votes.count, 'vote') %>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,249 @@
+// Place all the styles related to the categories controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+// no featured article
+
+.no-featured-article {
+  border: 1px solid rgb(238, 94, 44);
+  margin: 5em 1em 1em;
+  padding: 10px;
+  line-height: 2em;
+
+  h1,
+  h3 {
+    color: rgb(151, 63, 33);
+  }
+
+  li a {
+    color: rgb(151, 63, 33);
+  }
+}
+
+// all category page
+
+.index-category-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  .index-category-single {
+    background: rgb(78, 68, 63);
+    background-size: 100%;
+    background-position: top;
+    background-repeat: no-repeat;
+    height: 34.6vh;
+
+    .index-category-name {
+      padding: 1em;
+    }
+
+    a {
+      color: rgb(245, 157, 50);
+      text-transform: uppercase;
+      font-size: 1.1em;
+      font-weight: 700;
+    }
+
+    .index-category-articles-count {
+      color: rgb(245, 157, 50);
+      font-size: 14px;
+    }
+  }
+}
+
+// home page layout
+
+.featured_article {
+  height: 55vh;
+  width: 100%;
+  background: rgb(78, 68, 63);
+  background-size: 100%;
+  background-position: 0 -15em;
+  background-repeat: no-repeat;
+  position: relative;
+  color: white;
+
+  .featured-article-gradient {
+    height: 55vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(49, 33, 33, 0.9));
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    color: white;
+  }
+
+  .info {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+
+    .feat-title a {
+      color: rgb(238, 94, 44);
+      font-weight: 900;
+      font-size: 20px;
+    }
+
+    .feat-text {
+      font-size: 14px;
+      padding-top: 10px;
+    }
+  }
+}
+
+.categories {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  .single-category {
+    height: 28.7vh;
+    background: rgb(78, 68, 63);
+    background-size: 100%;
+    background-position: top;
+    background-repeat: no-repeat;
+    position: relative;
+
+    .title-category a {
+      text-decoration: underline rgb(238, 94, 44);
+    }
+
+    .title-category,
+    .title-category a,
+    .title-latest {
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      text-transform: capitalize;
+      padding: 10px 0 0 10px;
+    }
+
+    .title-latest {
+      position: absolute;
+      bottom: 25px;
+      left: 10px;
+    }
+  }
+}
+
+// show page layout
+
+.show-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  .show-article {
+    display: flex;
+    height: 41.8vh;
+    width: 100%;
+
+    .show-article-image {
+      height: 100%;
+      width: 50%;
+      background-position: top;
+      background-repeat: no-repeat;
+    }
+
+    .show-article-description {
+      width: 50%;
+      background-image: repeating-linear-gradient(-45deg, #fff 0 4px, #f3f3f3 4px 5px);
+      padding: 20px;
+      position: relative;
+
+      .show-category-name {
+        color: rgb(245, 157, 50);
+        text-transform: capitalize;
+        font-size: 16px;
+        font-weight: 900;
+        margin-bottom: 7px;
+        border-bottom: 3px solid rgb(245, 157, 50);
+      }
+
+      .show-article-title {
+        padding-top: 5px;
+        margin-bottom: 7px;
+      }
+
+      .show-article-title a {
+        color: #615856;
+        font-weight: 900;
+        text-transform: capitalize;
+      }
+
+      .show-article-text {
+        color: #615856;
+        font-size: 16px;
+      }
+
+      .article-vote {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        color: #615856;
+        font-size: 14px;
+
+        .show-article-vote a {
+          color: rgb(238, 94, 44);
+        }
+      }
+    }
+  }
+
+  .show-article:nth-child(4n+3),
+  .show-article:nth-child(4n+4) {
+    flex-direction: row-reverse;
+  }
+}
+
+//new category page layout
+
+.new-category-form {
+  margin: 0 auto;
+  width: 40%;
+  margin-top: 15%;
+  display: flex;
+  flex-direction: column;
+
+  .new-category-input {
+    padding: 10px 0;
+  }
+
+  input {
+    height: 40px;
+    padding: 0 10px;
+    color: #615856;
+    font-size: 16px;
+    width: 100%;
+  }
+
+  input:focus {
+    outline: none;
+  }
+
+  .new-category-btn {
+    display: flex;
+    justify-content: center;
+
+    .btn {
+      background: rgb(78, 68, 63);
+      border-radius: 4px;
+      border: 1px solid #4c4c4c;
+      height: 34px;
+      color: white;
+      width: 50%;
+    }
+
+    .btn-submit {
+      margin-right: 2px;
+      cursor: pointer;
+    }
+
+    .btn-cancel {
+      text-align: center;
+      margin-left: 2px;
+      padding-top: 5px;
+    }
+  }
+}

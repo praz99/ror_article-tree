@@ -1,0 +1,9 @@
+<%= featured_article_check %>
+<div class="categories">
+  <% @categories.each do |cat| %>
+    <div class="single-category" style="background-image: url(<%= background_check(cat) %>)">
+      <div class="title-category"><%=link_to cat.name, category_path(cat) %></div>
+      <%= home_title_check(cat) %>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,40 @@
+<div class="new-article-container">
+  <aside class="new-article-instruction">
+    <h1>Got something to share? Write the article about it and share with the world.</h1>
+    <article>
+      Get an interesting title.<br/>
+      Write your thoughts and feelings.<br/>
+      Attach an suitable image for your article. <em><small>(max. 2MB)</small></em><br/>
+      Select a category.<br/>
+      Click submit button when you are done.<br/><br/>
+      If you cannot find a matching category for your article, you can <%=link_to 'create', new_category_path %> your own category.<br/>
+    </article>
+  </aside>
+
+  <fieldset class="new-article-form">
+    <%= form_with(model: @article, local: true) do |f| %>
+      <%= check_error(@article) %>
+      <div class="new-form-title">
+        <%= f.text_field :title, autofocus: true, placeholder: 'Give your article a nice title'%>
+      </div>
+      <div class="new-form-text">
+        <%= f.text_area :text, placeholder: 'Write your article here'%>
+      </div>
+      <div class="new-form-category-image">
+        <div class="new-form-image">
+          <%= form_image_check(f) %>
+          <div class="new-form-image-input">
+            <%= f.file_field :image %>
+          </div>
+        </div>
+        <div class="new-form-category">
+          <%= f.collection_select :category_ids, Category.order(:name), :id, :name, include_blank: 'select a category' %>
+        </div>
+      </div>
+      <div class="new-form-btn">
+        <%= f.submit 'Submit', class: 'btn btn-submit' %>
+        <%= link_to 'Cancel', :back, class: 'btn btn-cancel' %>
+      </div>
+    <% end %>
+  </fieldset>
+</div>

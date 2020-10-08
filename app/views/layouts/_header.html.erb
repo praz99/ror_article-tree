@@ -1,0 +1,23 @@
+<nav class="navbar">
+  <div class="nav-left">
+    <div class="logo">
+    <%= link_to root_path do %>
+      <%= image_tag 'logo-new.png', class: 'nav-logo'%>
+    <% end %>
+    </div>
+    <%= login_check_left %>
+  </div>
+
+  <div class="nav-center">
+    <%= link_to 'home', root_path %>
+    <% categ = Category.ordered_priority.limit(5) %>
+    <% categ.each do |cat| %>
+      <%= link_to cat.name, category_path(cat) %>
+    <% end %>
+    <%= link_to 'all categories', categories_path %>
+  </div>
+
+  <div class="nav-right">
+    <%= login_check_right %>
+  </div>
+</nav>
