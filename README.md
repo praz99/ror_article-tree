@@ -145,11 +145,11 @@ Give a ⭐️ if you like this project!
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/praz99/ruby_capstone.svg?style=flat-square
 [contributors-url]: https://github.com/praz99/ruby_capstone/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/praz99/ruby_tic_tac_toe.svg?style=flat-square
+[forks-shield]: https://img.shields.io/github/forks/praz99/ruby_capstone.svg?style=flat-square
 [forks-url]: https://github.com/praz99/ruby_capstone/network/members
-[stars-shield]: https://img.shields.io/github/stars/praz99/ruby_tic_tac_toe.svg?style=flat-square
+[stars-shield]: https://img.shields.io/github/stars/praz99/ruby_capstone.svg?style=flat-square
 [stars-url]: https://github.com/praz99/ruby_capstone/stargazers
-[issues-shield]: https://img.shields.io/github/issues/praz99/ruby_tic_tac_toe.svg?style=flat-square
+[issues-shield]: https://img.shields.io/github/issues/praz99/ruby_capstone.svg?style=flat-square
 [issues-url]: https://github.com/praz99/ruby_capstone/issues
 
 ## License
